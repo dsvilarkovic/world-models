@@ -34,6 +34,8 @@ def sample_continuous_policy(action_space, seq_len, dt):
 
     :returns: sequence of seq_len actions
     """
+
+
     actions = [action_space.sample()]
     for _ in range(seq_len):
         daction_dt = np.random.randn(*actions[-1].shape)
